@@ -1,6 +1,11 @@
 # Import PyPDF2 Library
 import PyPDF2
 import re
+import os
+
+os.chdir(
+    "C:\\Users\\ASUS\\Desktop\\Semestre6\\Projeto\\Projeto1\\Projeto-Final\\python"
+)
 
 
 def pdftotext(pdfFile):
