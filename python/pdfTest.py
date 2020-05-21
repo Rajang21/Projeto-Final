@@ -1,25 +1,24 @@
-from pdfminer.pdfinterp import PDFResourceManager,PDFPageInterpreter
-from pdfminer.converter import TextConverter
-from pdfminer.layout import LAParams
-from pdfminer.pdfpage import PDFPage
-from io import BytesIO
+# Import PyPDF2 Library
+import PyPDF2
+import re
 
-def pdf_to_text(path):
-    manager = PDFResourceManager()
-    retstr = BytesIO()
-    layout = LAParams(all_texts=True)
-    device = TextConverter(manager, retstr, laparams=layout)
-    filepath = open(path, 'rb')
-    interpreter = PDFPageInterpreter(manager, device)
-    for page in PDFPage.get_pages(filepath, check_extractable=True):
-        interpreter.process_page(page)
-    text = retstr.getvalue()
 
-    filepath.close()
-    device.close()
-    retstr.close()
+def pdftotext(pdfFile):
+    pdfText = []
+    numPages = pdfFile.getNumPages()
 
-    return text
+    for i in range(0, numPages):
+        pdfPage = pdfFile.getPage(i)
+        Text = pdfPage.extractText()
+        pdfText.append(Text)
 
-text = pdf_to_text("D:\Faculdade\Projeto\_2019-20_LEIM_proposta_PRJ_25.pdf")
-print(text)
+    return pdfText
+
+
+def searchtext(keyword, text):
+    search = re.search(keyword, text)
+    return search
+
+
+pdf = PyPDF2.PdfFileReader("true_or_false_question.pdf")
+print(pdf)
