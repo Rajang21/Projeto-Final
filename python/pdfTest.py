@@ -1,6 +1,7 @@
 # Import PyPDF2 Library
 import PyPDF2
 import re
+import os
 
 
 def pdftotext(pdfFile):
@@ -20,5 +21,5 @@ def searchtext(keyword, text):
     return search
 
 
-pdf = PyPDF2.PdfFileReader("true_or_false_question.pdf")
+pdf = PyPDF2.PdfFileReader("python/true_or_false_question.pdf")
 print(pdf)
