@@ -10,6 +10,7 @@ def convert_pdf_to_txt(path):
     retstr = StringIO()
     codec = "utf-8"
     laparams = LAParams()
+    laparams.word_margin = 0.12
     device = TextConverter(rsrcmgr, retstr, codec=codec, laparams=laparams)
     fp = open(path, "rb")
     interpreter = PDFPageInterpreter(rsrcmgr, device)
