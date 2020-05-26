@@ -3,16 +3,11 @@ import PyPDF2
 import re
 import os
 
+
 def pdftotext(pdfFile):
-    pdfText = []
-    numPages = pdfFile.getNumPages()
-
-    for i in range(0, numPages):
-        pdfPage = pdfFile.getPage(i)
-        Text = pdfPage.extractText()
-        pdfText.append(Text)
-
-    return pdfText
+    page = pdfFile.getPage(0)
+    text = page.extractText().encode("utf-8")
+    return text
 
 
 def searchtext(keyword, text):
@@ -21,4 +16,4 @@ def searchtext(keyword, text):
 
 
 pdf = PyPDF2.PdfFileReader("true_or_false_question.pdf")
-print(pdf)
+print(pdftotext(pdf))
