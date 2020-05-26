@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import fitz
+import fitz  # PyMUPDF
 from pylatexenc.latexwalker import LatexWalker, LatexEnvironmentNode
 from pylatexenc.latex2text import LatexNodes2Text
 
@@ -13,6 +13,16 @@ def decode(path):
 
 # print(decode("true_or_false_question.pdf"))
 
-t = LatexNodes2Text.read_input_file(fn="answer_1_true.tex")
-tex = LatexWalker(open("answer_1_true.tex", "r"))
-(nodelist, pos, len_) = tex.get_latex_nodes(pos=0)
+a = (
+    " ".join(open("answer_1_true.tex", "r").readlines())
+    .encode("ISO-8859-1")
+    .decode("utf-8")
+)
+
+
+print(LatexNodes2Text().latex_to_text(a))
+# tex = LatexWalker(
+#     " ".join(open("answer_1_true.tex", "r").readlines()).encode("utf-8").decode("utf-8")
+# )
+# print(tex)
+# (nodelist, pos, len_) = tex.get_latex_nodes(pos=0)
