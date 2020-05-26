@@ -12,9 +12,7 @@ def decodePdf(path):
 
 
 def decodeTex(path):
-    doc = " ".join(open(path, "r").readlines())
-    doc = doc.encode("ISO-8859-1")
-    doc = doc.decode("utf-8")
+    doc = " ".join(open(path, "r").readlines()).encode("ISO-8859-1").decode("utf-8")
     return LatexNodes2Text().latex_to_text(doc)
 
 
