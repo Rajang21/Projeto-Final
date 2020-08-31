@@ -1,3 +1,0 @@
-index
-teste
-LangIndex
