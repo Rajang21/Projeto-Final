@@ -61,9 +61,7 @@ class WhooshHandler:
 
     specialCharacters = ["´", "¸", "˜", "`", "^"]
     indexFolder = None
-    homeWorkIndex = None
     directory = None
-    questionFolders = None
 
     def __init__(self, indexFolder):
         """
