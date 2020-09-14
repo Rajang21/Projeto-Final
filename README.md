@@ -1,4 +1,4 @@
- :sparkles: Projeto Final  :sparkles:
+Projeto Final
 
 Motor de busca para exercicios python.
 
