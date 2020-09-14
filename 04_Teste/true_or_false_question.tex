@@ -1,0 +1,80 @@
+\documentclass[12pt,varwidth=16cm,border=1pt]{standalone}
+
+\usepackage{listings}
+\renewcommand{\lstlistingname}{Listagem}
+\lstset{
+  language=python,
+  frame=single,
+  breaklines=true,
+  inputencoding=utf8,
+  extendedchars=true,
+  literate={á}{{\'a}}1
+           {à}{{\`a}}1
+           {ã}{{\~{a}}}1
+           {õ}{{\~{o}}}1
+           {é}{{\'e}}1
+           {í}{{\'i}}1
+           {ó}{{\'o}}1
+           {ú}{{\'u}}1
+           {ç}{{\c{c}}}1
+           {ê}{{\^{e}}}1
+           {º}{{\textsuperscript{o}}}1,
+  showstringspaces=false,
+  basicstyle=\scriptsize\ttfamily,
+  columns=flexible,
+  keepspaces=true,
+  %keywordstyle=\scriptsize\ttfamily\color{idlebuiltins},
+  %keywords=[2]{type, ord, chr, bin, int},
+  %keywordstyle={[2]\scriptsize\ttfamily\color{idlebuiltins}},
+  commentstyle=\scriptsize\ttfamily
+}
+
+\renewcommand{\labelenumi}{\alph{enumi})}
+
+\begin{document}
+
+% este documento é um template.
+
+% este documento é usado pelo script make_random_versions.py para
+% criar as versões desta pergunta
+
+Considere a classe \verb+CorRGB+, implementada durante as aulas, no módulo
+\verb+cor_rgb_xxxxx.py+ (onde \verb+xxxxx+ representa o seu número de
+aluno), e cuja especificação está disponível no moodle.
+
+Considere também o programa Python 3 que se segue, na mesma
+pasta/diretoria do módulo \verb+cor_rgb_xxxxx.py+ (de forma a que o
+\verb+import+ seja executado sem erros). Ignore a variável \verb+seed+
+e a função \verb+random_float+, que se destinam
+exclusivamente à geração de números pseudo-aleatórios.
+
+\lstinputlisting{program.py}
+
+Acrescente a este programa:
+
+\begin{enumerate}
+
+\item A lista \verb+s4+. O elemento da lista \verb+s4+, em cada
+  índice, é um objeto \verb+CorRGB+ que resulta da soma dos objetos
+  \verb+CorRGB+ das listas \verb+s1+ e \verb+s2+, no mesmo
+  índice.
+
+\item A lista \verb+s5+. O elemento da lista \verb+s5+, em cada
+  índice, é um objeto \verb+CorRGB+ que resulta do produto dos objetos
+  \verb+CorRGB+ das listas \verb+s1+ e \verb+s2+, no mesmo
+  índice.
+
+\item A lista \verb+s6+. O elemento da lista \verb+s6+, em cada
+  índice, é um objeto \verb+CorRGB+ que resulta do produto do objeto
+  \verb+CorRGB+ na lista \verb+s1+ pelo \verb+float+ da
+  \verb+s3+, no mesmo índice.
+
+\end{enumerate}
+
+Indique se é verdadeiro ou falso.
+
+\end{document}
+
+
+
+
