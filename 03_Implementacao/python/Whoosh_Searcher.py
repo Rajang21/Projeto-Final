@@ -18,7 +18,6 @@ from whoosh.fields import *
 from whoosh.qparser import QueryParser
 from whoosh.qparser import MultifieldParser
 from whoosh.analysis import LanguageAnalyzer
-from whoosh.analysis import StemmingAnalyzer
 from whoosh.index import EmptyIndexError
 
 
