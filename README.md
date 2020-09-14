@@ -3,17 +3,20 @@ Projeto Final
 Motor de busca para exercicios python.
 
 Formato necessário das diretorias de questôes:
-> question_1/version_1/true_or_false_question.pdf
-> question_1/version_2/..
-> question_1/version_3/..
->                    .
->                   .
->                   .
-> question_2/version_1/true_or_false_question.pdf
-> question_2/version_2/..
-> question_2/version_3/..
->                    .
->                    .
+
+question_1/version_1/true_or_false_question.pdf
+question_1/version_2/..
+question_1/version_3/..
+                  .
+                  .
+                  .
+question_2/version_1/true_or_false_question.pdf
+question_2/version_2/..
+question_2/version_3/..
+                   .
+                   .
+                   
+Em que os numeros das questões e das versões são arbitrários.
 
 1) Correr o PythonSearcher_UserInterface.ipynb.
 2) Iniciar com Configure Search Space -> create new index -> com o nome pretendido.
