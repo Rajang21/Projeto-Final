@@ -83,7 +83,7 @@ class WhooshHandler:
         assert directory , 'Documents directory cannot be empty"""
 
         self.indexFolder = indexFolder
-        self.homeWorkIndex = self.indexFolder + "_HomeWork"
+        # self.homeWorkIndex = self.indexFolder + "_HomeWork"
         # self.directory = directory
         # self.questionFolders = [x for x in os.listdir(self.directory)]
 
@@ -266,7 +266,7 @@ class WhooshHandler:
             if i.strip("\n") == name:
                 try:
                     shutil.rmtree(name)
-                    shutil.rmtree(name + "_HomeWork")
+                    # shutil.rmtree(name + "_HomeWork")
                     deleted = True
                     message = "Index successfully deleted."
                     break
